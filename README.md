@@ -2,7 +2,7 @@
 
 Multiplication   A(MxN)+B(MxN) and C(NxK)+D(NxK) dimensional matrix
 
-Dear customer!
+Dear friend!
 
 You need enter M,N dimension for matrixes A & B
 also enter N,K dimension for matrixes C & D
