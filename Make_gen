@@ -1,0 +1,41 @@
+
+.PHONY: WELCOME
+.PHONY: RUN
+
+ALL: WELCOME COMP  RUN
+
+
+WELCOME:
+	@echo "+++++++++++++++++++++++++++++++++++++++++++++++++++"
+	@echo "++  GENERATOR   version1.01++++++++++++++++++++++++"
+	@echo "+++++++++++++++++++++++++++++++++++++++++++++++++++"
+	@echo " "
+	@echo " "
+
+COMP: generation.cpp
+	@echo " "
+	@echo "STEP_1 "
+	@echo "Now I am creating  ./gen  executable file " 
+	g++ generation.cpp -o  ./gen
+	@echo " Please wait ......and do not panic .....   "
+	@echo "------ DONE ------"
+	@echo "++++++++++++++++++++++++++++++++++++++++++++++++++"
+	@echo "++++++++++++++++++++++++++++++++++++++++++++++++++"
+
+RUN:
+	@echo " "	
+	@echo "STEP_2"
+	@echo "Now I am running  ./gen  executable file  "
+	@echo "and will create a.txt, b.txt, c.txt, c.txt file with value"
+	./gen
+	@echo " Currently you have A,B, C ,D matrix with value "
+	@echo "------ DONE ------"
+	@echo "++++++++++++++++++++++++++++++++++++++++++++++++++"
+	@echo "++++++++++++++++++++++++++++++++++++++++++++++++++"
+	
+CLEAN:
+	rm -f *.txt
+	rm -f gen
+
+	
+

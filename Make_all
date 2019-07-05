@@ -1,0 +1,32 @@
+
+.PHONY: WELCOME
+.PHONY:	GEN
+.PHONY: OPERATION 
+
+
+ALL: WELCOME  GEN OPERATION
+
+WELCOME:
+	clear
+	@echo "++++++++++++++++++++++++++++++++++++++++++++++"
+	@echo "++++  RUN ALL PROGRAM = GEN + OPERATION   ++++"
+	@echo "++++++++++++++++++++++++++++++++++++++++++++++"
+
+GEN:  generation.cpp
+	@echo " "
+	@echo "PROJECT_STEP_1"
+	make -f Make_gen
+	@echo "----DONE----"
+
+OPERATION: operation.cpp
+	@echo " "
+	@echo "PROJECT_STEP_2"
+	make -f Make_oper
+	@echo "----DONE----"
+
+CLEAN:
+	rm -f *.txt
+	rm gen
+	rm smd
+	
+	

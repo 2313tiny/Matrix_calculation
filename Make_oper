@@ -1,0 +1,33 @@
+
+
+	
+.PHONY: WELCOME
+
+
+ALL: WELCOME CREATE RUN
+
+WELCOME:
+	@echo "#########################################"
+	@echo "######## OPERATION       v1.1############"
+	@echo "#########################################"
+	@echo " "
+
+CREATE: operation.cpp
+	@echo " I am creating smd executable file"
+	g++ operation.cpp -o smd 
+	@echo "Please , run smd file "
+	@echo "------DONE-------"
+	@echo " "
+
+RUN:	
+	@echo " I am running smd exe file"
+	@echo "Please do not panic and just wait...."
+	./smd
+	@echo "------DONE-------"
+	@echo " "
+
+CLEAN:
+	rm -f *.txt
+	rm -f smd
+
+	
